@@ -1,0 +1,718 @@
+###### typické redirecty + stará přesměrování
+http://www.firmy.cz/
+301
+http://firmy.cz/
+301
+# historické redirecty nz geo=0
+https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?geo=0
+301
+# detail se spatnym nazvem
+https://www.firmy.cz/detail/155088-google.html
+200
+
+https://www.firmy.cz/detail/12967540-vasecigareta-cz-praha-smichov.html?_escaped_fragment_=
+301
+
+https://www.firmy.cz/detail/12967540-vasecigareta-cz-praha-smichov.html
+200
+
+https://www.firmy.cz/detail/442434-sbazar-cz-praha-cast-obce-smichov.html?_escaped_fragment_=
+301
+
+https://www.firmy.cz/detail/442434-sbazar-cz-praha-cast-obce-smichov.html
+200
+
+# redirecty pobocek
+
+###### URL pro roboty
+https://www.firmy.cz/robots.txt
+200
+https://www.firmy.cz/sitemap.xml
+200
+https://www.firmy.cz/sitemap1.xml.gz
+200
+
+
+###### chyby aplikace
+# smazaná firma vrací 410
+https://www.firmy.cz/detail/13132730-bkplast-citice.html?jardaladiseo=1&_escaped_fragment_=
+410
+# špatný adresář
+https://www.firmy.cz/hovadina?jardaladiseo=1&_escaped_fragment_=
+404
+# nic nenajdu
+https://www.firmy.cz/?q=%C5%A1m%C3%A9%C4%8Dko404&jardaladiseo=1&_escaped_fragment_=
+404
+
+
+###### homepage
+https://www.firmy.cz/?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Katalog firem a institucí • Firmy.cz
+content;;meta[name="description"];;0;;Katalog ověřených firem v ČR. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+href;;//*[@id="box2"]/div/div/ul/li[1]/h3/a;;0;;/Auto-moto
+
+
+###### homepage + lokalita kraj
+https://www.firmy.cz/kraj-praha?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Katalog firem a institucí Praha • Firmy.cz
+content;;meta[name="description"];;0;;Katalog ověřených firem v Praze a okolí. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+href;;//*[@id="box2"]/div/div/ul/li[1]/h3/a;;0;;/Auto-moto/kraj-praha
+
+
+###### homepage + lokalita Praha 5
+https://www.firmy.cz/kraj-praha/praha-5?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Katalog firem a institucí Praha 5 • Firmy.cz
+content;;meta[name="description"];;0;;Katalog ověřených firem v Praze 5 a okolí. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+href;;//*[@id="box2"]/div/div/ul/li[1]/h3/a;;0;;/Auto-moto/kraj-praha/praha-5
+
+
+###### homepage + lokalita okres
+https://www.firmy.cz/kraj-jihomoravsky/brno-mesto?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Katalog firem a institucí Brno-město • Firmy.cz
+content;;meta[name="description"];;0;;Katalog ověřených firem v Brně-město a okolí. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+href;;//*[@id="box2"]/div/div/ul/li[1]/h3/a;;0;;/Auto-moto/kraj-jihomoravsky/brno-mesto
+
+
+###### homepage + lokalita obec
+https://www.firmy.cz/kraj-vysocina/zdar-nad-sazavou/5343-nove-mesto-na-morave?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Katalog firem a institucí Nové Město na Moravě • Firmy.cz
+content;;meta[name="description"];;0;;Katalog ověřených firem v Novém Městě na Moravě. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+href;;//*[@id="box2"]/div/div/ul/li[1]/h3/a;;0;;/Auto-moto/kraj-vysocina/zdar-nad-sazavou/5343-nove-mesto-na-morave
+
+
+###### kategorie
+https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Autobazar • Firmy.cz
+contentContains;;meta[name="description"];;0;;firem v kategorii Autobazary. Vybrat si můžete z firem v okolí, třeba
+plaintext;;//h1;;0;;Autobazary
+# SEO text pod kategorií
+plaintext;;//*[@id="box7"]/[@class="catalogSeoDescription"]/div/h3;;0;;Autobazary 
+# SEO text u stránkování
+plaintext;;//*[@id="box6"]/p[@class="extendInfo"];;0;;z kategorie Autobazary v celé ČR.
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1
+href;;link[rel="next"];;0;;/Auto-moto/Auto-moto-prodejci/Autobazary?page=2
+plaintext;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/h2;;0;;Autobazary
+plaintextContains;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/div/ul/;;0;;Praha
+hrefContains;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/div/ul/li/a;;0;;/Auto-moto/Auto-moto-prodejci/Autobazary/kraj-
+
+
+###### kategorie + UTM = test ignorace UTM v URL
+https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1&utm_source=jarda&_escaped_fragment_=
+200
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1
+href;;link[rel="next"];;0;;/Auto-moto/Auto-moto-prodejci/Autobazary?page=2
+
+
+###### kategorie + stránkování
+https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?page=2&jardaladiseo=1&_escaped_fragment_=
+200
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?page=2&amp;jardaladiseo=1
+href;;link[rel="prev"];;0;;/Auto-moto/Auto-moto-prodejci/Autobazary
+href;;link[rel="next"];;0;;/Auto-moto/Auto-moto-prodejci/Autobazary?page=3
+
+
+###### kategorie + lokalita kraj 
+https://www.firmy.cz/Instituce-a-urady/Samosprava/kraj-praha?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Samospráva Praha • Firmy.cz
+contentContains;;meta[name="description"];;0;;firem v kategorii Samospráva v Praze a okolí. Vybrat si můžete z firem v okolí, třeba
+plaintext;;//h1;;0;;Samospráva   					Praha
+# SEO text u stránkování
+plaintext;;//*[@id="box6"]/p[@class="extendInfo"];;0;;z kategorie Samospráva v Praze.
+
+#href;;link[rel="canonical"];;0;;https://www.firmy.cz/Instituce-a-urady/Samosprava/kraj-praha?jardaladiseo=1
+#href;;link[rel="next"];;0;;/Instituce-a-urady/Samosprava/kraj-praha?page=2
+
+plaintext;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/h2;;0;;Samospráva v Praze
+plaintextContains;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/div/ul/;;0;;Praha
+hrefContains;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/div/ul/li/a;;0;;/Instituce-a-urady/Samosprava/kraj-praha/praha-
+
+
+###### kategorie + lokalita kraj + stránkování
+https://www.firmy.cz/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-praha?page=3&jardaladiseo=1&_escaped_fragment_=
+200
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-praha?page=3
+href;;link[rel="next"];;0;;/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-praha?page=4
+href;;link[rel="prev"];;0;;/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-praha?page=2
+
+  
+###### kategorie + okres
+https://www.firmy.cz/Banky-a-financni-sluzby/Bankovni-a-sporitelni-sluzby/Banky/Bankomaty/kraj-vysocina/jihlava?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Bankomaty Jihlava • Firmy.cz
+contentContains;;meta[name="description"];;0;;firem v kategorii Bankomaty v Jihlavě a okolí. Vybrat si můžete z firem v okolí, třeba 
+plaintext;;//h1;;0;;Bankomaty   					Jihlava
+# SEO text u stránkování
+plaintext;;//*[@id="box6"]/p[@class="extendInfo"];;0;;z kategorie Bankomaty v Jihlavě.
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Banky-a-financni-sluzby/Bankovni-a-sporitelni-sluzby/Banky/Bankomaty/kraj-vysocina/jihlava
+href;;link[rel="next"];;0;;/Banky-a-financni-sluzby/Bankovni-a-sporitelni-sluzby/Banky/Bankomaty/kraj-vysocina/jihlava?page=2
+plaintext;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/h2;;0;;Bankomaty v okrese Jihlava
+plaintextContains;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/div/ul/;;0;;Jihlava
+# ta pětka na konci URL je tam proto, že 4 lokality obsahují pětku v ID
+hrefContains;;//*[@id="box8"]/div[@class="catalogSeoMunicipality"]/div/ul/li/a;;0;;/Banky-a-financni-sluzby/Bankovni-a-sporitelni-sluzby/Banky/Bankomaty/kraj-vysocina/jihlava/5
+
+
+###### kategorie + okres + stránkování
+https://www.firmy.cz/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-vysocina/zdar-nad-sazavou?page=4&jardaladiseo=1&_escaped_fragment_=
+200
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-vysocina/zdar-nad-sazavou?page=4
+href;;link[rel="next"];;0;;/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-vysocina/zdar-nad-sazavou?page=5
+href;;link[rel="prev"];;0;;/Obchody-a-obchudky/Hypermarkety-supermarkety-a-obchodni-domy/Hypermarkety-a-supermarkety/Potravinove-supermarkety/kraj-vysocina/zdar-nad-sazavou?page=3
+
+
+https://www.firmy.cz/detail/231112-fakultni-nemocnice-u-sv-anny-v-brne-brno-stare-brno.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Fakultní nemocnice u sv. Anny v Brně (Brno, Staré Brno) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/231112-fakultni-nemocnice-u-sv-anny-v-brne-brno-stare-brno.html
+plaintext;;//h1;;0;;Fakultní nemocnice u sv. Anny v Brně
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a hodnocení Fakultní nemocnice u sv. Anny v Brně, Brno, Staré Brno. Telefon: 543 181 ... 
+
+
+https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-zemedelskych-komodit/Vyrobci-produktu-zivocisne-vyroby/Chovy-drobnych-hospodarskych-zvirat/Chovy-drubeze-a-zpracovani-drubezich-produktu/kraj-moravskoslezsky?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Chov drůbeže Moravskoslezský kraj • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-zemedelskych-komodit/Vyrobci-produktu-zivocisne-vyroby/Chovy-drobnych-hospodarskych-zvirat/Chovy-drubeze-a-zpracovani-drubezich-produktu/kraj-moravskoslezsky
+plaintext;;//h1;;0;;Chov drůbeže   					Moravskoslezský kraj
+href;;link[rel="next"];;0;;/Velkoobchod-a-vyroba/Vyrobci-zemedelskych-komodit/Vyrobci-produktu-zivocisne-vyroby/Chovy-drobnych-hospodarskych-zvirat/Chovy-drubeze-a-zpracovani-drubezich-produktu/kraj-moravskoslezsky?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;kategorii Chov drůbeže v Moravskoslezském kraji a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/2118786-mvdr-jaromir-baudys-veterinarni-osetrovna-jablonec-nad-nisou.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;MVDr. Jaromír BAUDYŠ - veterinární ošetřovna (Jablonec nad Nisou) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/2118786-mvdr-jaromir-baudys-veterinarni-osetrovna-jablonec-nad-nisou.html
+plaintext;;//h1;;0;;MVDr. Jaromír BAUDYŠ - veterinární ošetřovna
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, otevírací hodiny a hodnocení MVDr. Jaromír BAUDYŠ - veterinární ošetřovna, Jablonec nad Nisou. Telefon: 483 320 ... 
+
+
+https://www.firmy.cz/detail/414687-cooper-standard-automotive-ceska-republika-zdar-nad-sazavou-1.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Cooper-Standard Automotive Česká republika, s.r.o. (Žďár nad Sázavou 1) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/414687-cooper-standard-automotive-ceska-republika-zdar-nad-sazavou-1.html
+plaintext;;//h1;;0;;Cooper-Standard Automotive Česká republika, s.r.o.
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a hodnocení Cooper-Standard Automotive Česká republika, s.r.o., Žďár nad Sázavou 1. Telefon: 566 339 ... 
+
+
+https://www.firmy.cz/detail/442434-sbazar-cz-praha-smichov.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Sbazar.cz (Praha, Smíchov) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/442434-sbazar-cz-praha-smichov.html
+plaintext;;//h1;;0;;Sbazar.cz
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon a hodnocení Sbazar.cz, Praha, Smíchov. Telefon: 234 694 ... 
+
+
+https://www.firmy.cz/detail/12935736-engelbert-strauss-cz-ceske-budejovice-6.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;engelbert-strauss.cz (České Budějovice 6) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/12935736-engelbert-strauss-cz-ceske-budejovice-6.html
+plaintext;;//h1;;0;;engelbert-strauss.cz
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a hodnocení engelbert-strauss.cz, České Budějovice 6. Telefon: 844 400 ... 
+
+
+https://www.firmy.cz/detail/373779-mudr-petr-kubanek-nymburk.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;MUDr. Petr Kubánek (Nymburk) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/373779-mudr-petr-kubanek-nymburk.html
+plaintext;;//h1;;0;;MUDr. Petr Kubánek
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a ordinační hodiny MUDr. Petr Kubánek, Nymburk. Telefon: 325 531 ... 
+
+
+https://www.firmy.cz/detail/216021-posta-brno-12-brno-kralovo-pole.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Pošta Brno 12 (Brno, Královo Pole) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/216021-posta-brno-12-brno-kralovo-pole.html
+plaintext;;//h1;;0;;Pošta Brno 12 	 		Česká pošta, s.p.
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, otevírací hodiny a hodnocení Pošta Brno 12, Brno, Královo Pole. Telefon: 954 261 ... 
+
+
+https://www.firmy.cz/Elektro-mobily-a-pocitace/Elektroservisy/Mobily-a-telefony/kraj-plzensky/plzen-mesto?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Servis telefonů a mobilů Plzeň-město • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Elektro-mobily-a-pocitace/Elektroservisy/Mobily-a-telefony/kraj-plzensky/plzen-mesto
+plaintext;;//h1;;0;;Servis telefonů a mobilů   					Plzeň-město
+href;;link[rel="next"];;0;;/Elektro-mobily-a-pocitace/Elektroservisy/Mobily-a-telefony/kraj-plzensky/plzen-mesto?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;v kategorii Servis telefonů a mobilů v Plzni-město a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/Obchody-a-obchudky/Bazary-a-zastavarny/Second-handy/kraj-jihomoravsky/brno-mesto?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Second handy Brno-město • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Obchody-a-obchudky/Bazary-a-zastavarny/Second-handy/kraj-jihomoravsky/brno-mesto
+plaintext;;//h1;;0;;Second handy   					Brno-město
+href;;link[rel="next"];;0;;/Obchody-a-obchudky/Bazary-a-zastavarny/Second-handy/kraj-jihomoravsky/brno-mesto?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;; kategorii Second handy v Brně-město a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/485868-poliklinika-olomouc-olomouc.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;POLIKLINIKA OLOMOUC, spol. s r.o. (Olomouc) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/485868-poliklinika-olomouc-olomouc.html
+plaintext;;//h1;;0;;POLIKLINIKA OLOMOUC, spol. s r.o.
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a ordinační hodiny POLIKLINIKA OLOMOUC, spol. s r.o., Olomouc. Telefon: 585 506 ... 
+
+
+https://www.firmy.cz/detail/2487553-mudr-alena-hujova-dobrichovice.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;MUDr. Alena Hujová (Dobřichovice) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/2487553-mudr-alena-hujova-dobrichovice.html
+plaintext;;//h1;;0;;MUDr. Alena Hujová
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, ordinační hodiny a hodnocení MUDr. Alena Hujová, Dobřichovice. Telefon: 724 773 ... 
+
+
+https://www.firmy.cz/detail/12828175-mudr-josef-balik-ambulantni-chirurgie-tabor.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;MUDr. Josef Balík - ambulantní chirurgie, s.r.o. (Tábor) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/12828175-mudr-josef-balik-ambulantni-chirurgie-tabor.html
+plaintext;;//h1;;0;;MUDr. Josef Balík - ambulantní chirurgie, s.r.o.
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, ordinační hodiny a hodnocení MUDr. Josef Balík - ambulantní chirurgie, s.r.o., Tábor. Telefon: 381 233 ... 
+
+
+https://www.firmy.cz/detail/483240-plavecky-bazen-ceska-trebova-ceska-trebova-parnik.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Plavecký bazén Česká Třebová (Česká Třebová, Parník) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/483240-plavecky-bazen-ceska-trebova-ceska-trebova-parnik.html
+plaintext;;//h1;;0;;Plavecký bazén Česká Třebová
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, provozní hodiny a hodnocení Plavecký bazén Česká Třebová, Česká Třebová, Parník. Telefon: 465 531 ... 
+
+
+https://www.firmy.cz/detail/12944472-s-taxi-olomouc-repcin.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;S TAXI (Olomouc, Řepčín) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/12944472-s-taxi-olomouc-repcin.html
+plaintext;;//h1;;0;;S TAXI
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, provozní hodiny a hodnocení S TAXI, Olomouc, Řepčín. Telefon: 704 048 ... 
+
+
+https://www.firmy.cz/Remesla-a-sluzby/Sluzby-pece-o-telo/Kadernictvi/kraj-ustecky/most?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Kadeřnictví a kadeřnické salóny Most • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Remesla-a-sluzby/Sluzby-pece-o-telo/Kadernictvi/kraj-ustecky/most
+plaintext;;//h1;;0;;Kadeřnictví a kadeřnické salóny   					Most
+href;;link[rel="next"];;0;;/Remesla-a-sluzby/Sluzby-pece-o-telo/Kadernictvi/kraj-ustecky/most?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;firem v kategorii Kadeřnictví a kadeřnické salóny v Mostu a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/470820-duvenbeck-logistik-volduchy.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;DUVENBECK LOGISTIK, s.r.o. (Volduchy) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/470820-duvenbeck-logistik-volduchy.html
+plaintext;;//h1;;0;;DUVENBECK LOGISTIK, s.r.o.
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, provozní hodiny a hodnocení DUVENBECK LOGISTIK, s.r.o., Volduchy. Telefon: 371 740 ... 
+
+
+https://www.firmy.cz/detail/2008447-e-chalupy-cz-chaty-a-chalupy-k-pronajmuti-olomouc-neredin.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;e-Chalupy.cz - chaty a chalupy k pronajmutí (Olomouc, Neředín) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/2008447-e-chalupy-cz-chaty-a-chalupy-k-pronajmuti-olomouc-neredin.html
+plaintext;;//h1;;0;;e-Chalupy.cz - chaty a chalupy k pronajmutí
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a hodnocení e-Chalupy.cz - chaty a chalupy k pronajmutí, Olomouc, Neředín. Telefon: 739 292 ... 
+
+
+https://www.firmy.cz/Cestovni-sluzby/Doprava-a-preprava/Taxi-sluzby/kraj-karlovarsky/sokolov?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Taxi služby Sokolov • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Cestovni-sluzby/Doprava-a-preprava/Taxi-sluzby/kraj-karlovarsky/sokolov
+plaintext;;//h1;;0;;Taxi služby   					Sokolov
+href;;link[rel="next"];;0;;/Cestovni-sluzby/Doprava-a-preprava/Taxi-sluzby/kraj-karlovarsky/sokolov?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;; firem v kategorii Taxi služby v Sokolově a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/463318-alza-cz-praha-holesovice.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Alza.cz (Praha, Holešovice) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/463318-alza-cz-praha-holesovice.html
+plaintext;;//h1;;0;;Alza.cz
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, výdejní hodiny a hodnocení Alza.cz, Praha, Holešovice. Telefon: 225 340 ... 
+
+
+https://www.firmy.cz/detail/179939-avizo-ostrava-poruba.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;AVÍZO (Ostrava, Poruba) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/179939-avizo-ostrava-poruba.html
+plaintext;;//h1;;0;;AVÍZO
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;AVÍZO, Ostrava, Poruba. 
+
+
+https://www.firmy.cz/detail/2675187-ministerstvo-vnitra-regionalni-oddeleni-pobytu-cizincu-liberec-liberec-i-stare-mesto.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Ministerstvo vnitra - Regionální oddělení pobytu cizinců Liberec (Liberec I-Staré Město) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/2675187-ministerstvo-vnitra-regionalni-oddeleni-pobytu-cizincu-liberec-liberec-i-stare-mesto.html
+plaintext;;//h1;;0;;Ministerstvo vnitra - Regionální oddělení pobytu cizinců Liberec
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, úřední hodiny a hodnocení Ministerstvo vnitra - Regionální oddělení pobytu cizinců Liberec, Liberec I-Staré Město. Telefon: 974 460 ... 
+
+
+https://www.firmy.cz/detail/2271000-mudr-bronislav-hosek-sobeslav-iii.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;MUDr. Bronislav Hošek (Soběslav III) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/2271000-mudr-bronislav-hosek-sobeslav-iii.html
+plaintext;;//h1;;0;;MUDr. Bronislav Hošek
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, ordinační hodiny a hodnocení MUDr. Bronislav Hošek, Soběslav III. Telefon: 381 521 ... 
+
+
+https://www.firmy.cz/detail/12898688-zubni-pohotovostni-sluzba-krajska-nemocnice-t-bati-zlin.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Zubní pohotovostní služba - Krajská nemocnice T. Bati (Zlín) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/12898688-zubni-pohotovostni-sluzba-krajska-nemocnice-t-bati-zlin.html
+plaintext;;//h1;;0;;Zubní pohotovostní služba - Krajská nemocnice T. Bati
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, ordinační hodiny a hodnocení Zubní pohotovostní služba - Krajská nemocnice T. Bati, Zlín. Telefon: 577 552 ... 
+
+
+https://www.firmy.cz/Obchody-a-obchudky/Prodejci-zabavniho-zbozi/Prodejci-zertovnych-predmetu/kraj-jihomoravsky/brno-mesto?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Prodej žertovných předmětů Brno-město • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Obchody-a-obchudky/Prodejci-zabavniho-zbozi/Prodejci-zertovnych-predmetu/kraj-jihomoravsky/brno-mesto
+plaintext;;//h1;;0;;Prodej žertovných předmětů   					Brno-město
+href;;link[rel="next"];;0;;/Obchody-a-obchudky/Prodejci-zabavniho-zbozi/Prodejci-zertovnych-predmetu/kraj-jihomoravsky/brno-mesto?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;firem v kategorii Prodej žertovných předmětů v Brně-město a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-zemedelskych-komodit/Vyrobci-produktu-rostline-vyroby/Ovocnarstvi/kraj-stredocesky?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Ovocnářství Středočeský kraj • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-zemedelskych-komodit/Vyrobci-produktu-rostline-vyroby/Ovocnarstvi/kraj-stredocesky
+plaintext;;//h1;;0;;Ovocnářství   					Středočeský kraj
+href;;link[rel="next"];;0;;/Velkoobchod-a-vyroba/Vyrobci-zemedelskych-komodit/Vyrobci-produktu-rostline-vyroby/Ovocnarstvi/kraj-stredocesky?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;v kategorii Ovocnářství ve Středočeském kraji a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/162893-nejlevnejsi-taxi-cz-praha-kosire.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;NEJLEVNĚJŠÍ-TAXI.cz (Praha, Košíře) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/162893-nejlevnejsi-taxi-cz-praha-kosire.html
+plaintext;;//h1;;0;;NEJLEVNĚJŠÍ-TAXI.cz
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a hodnocení NEJLEVNĚJŠÍ-TAXI.cz, Praha, Košíře. Telefon: 226 000 ... 
+
+
+https://www.firmy.cz/detail/373600-mudr-helena-nemeckova-zatec.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;MUDr. Helena Němečková (Žatec) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/373600-mudr-helena-nemeckova-zatec.html
+plaintext;;//h1;;0;;MUDr. Helena Němečková
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, ordinační hodiny a hodnocení MUDr. Helena Němečková, Žatec. Telefon: 414 110 ... 
+
+
+https://www.firmy.cz/pobocky/12939146-hello-bank/?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Pobočky Hello bank!  • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/pobocky/12939146-hello-bank/
+plaintext;;//h1;;0;;Pobočky firmy Hello bank!
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Hledáte nejbližší pobočky Hello bank! ve svém okolí? Na firmy.cz je snadno najdete na mapě s aktuálními ověřenými kontakty a hodnocením uživatelů.
+
+
+https://www.firmy.cz/detail/407287-freevideo-cz-praha-mala-strana.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;FREEVIDEO.CZ (Praha, Malá Strana) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/407287-freevideo-cz-praha-mala-strana.html
+plaintext;;//h1;;0;;FREEVIDEO.CZ
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a hodnocení FREEVIDEO.CZ, Praha, Malá Strana. Telefon: 274 773 ... 
+
+
+https://www.firmy.cz/Remesla-a-sluzby/Sluzby-pece-o-telo/Kosmeticke-salony/Nehtova-studia/kraj-jihocesky/ceske-budejovice?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Nehtová studia České Budějovice • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Remesla-a-sluzby/Sluzby-pece-o-telo/Kosmeticke-salony/Nehtova-studia/kraj-jihocesky/ceske-budejovice
+plaintext;;//h1;;0;;Nehtová studia   					České Budějovice
+href;;link[rel="next"];;0;;/Remesla-a-sluzby/Sluzby-pece-o-telo/Kosmeticke-salony/Nehtova-studia/kraj-jihocesky/ceske-budejovice?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;firem v kategorii Nehtová studia v Českých Budějovicích a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/12743676-autodily-opel-peugeot-citroen-praha-sterboholy.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Autodíly Opel, Peugeot, Citroen (Praha, Štěrboholy) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/12743676-autodily-opel-peugeot-citroen-praha-sterboholy.html
+plaintext;;//h1;;0;;Autodíly Opel, Peugeot, Citroen
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, otevírací hodiny a hodnocení Autodíly Opel, Peugeot, Citroen, Praha, Štěrboholy. Telefon: 603 232 ... 
+
+
+https://www.firmy.cz/detail/2367712-bissolo-gabriele-rep-ceca-sucha-loz.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;BISSOLO GABRIELE REP.CECA, s.r.o. (Suchá Loz) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/2367712-bissolo-gabriele-rep-ceca-sucha-loz.html
+plaintext;;//h1;;0;;BISSOLO GABRIELE REP.CECA, s.r.o.
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a otevírací hodiny BISSOLO GABRIELE REP.CECA, s.r.o., Suchá Loz. Telefon: 572 647 ... 
+
+
+https://www.firmy.cz/Remesla-a-sluzby/Remesla/Servisy-a-opravarstvi/Opravy-hodin-a-hodinek/kraj-praha?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Opravy hodin a hodinek Praha • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Remesla-a-sluzby/Remesla/Servisy-a-opravarstvi/Opravy-hodin-a-hodinek/kraj-praha
+plaintext;;//h1;;0;;Opravy hodin a hodinek   					Praha
+href;;link[rel="next"];;0;;/Remesla-a-sluzby/Remesla/Servisy-a-opravarstvi/Opravy-hodin-a-hodinek/kraj-praha?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;; firem v kategorii Opravy hodin a hodinek v Praze a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/13063080-zubni-pohotovost-nemocnice-most-most.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Zubní pohotovost - Nemocnice Most (Most) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/13063080-zubni-pohotovost-nemocnice-most-most.html
+plaintext;;//h1;;0;;Zubní pohotovost - Nemocnice Most
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, e-mail, ordinační hodiny a hodnocení Zubní pohotovost - Nemocnice Most, Most. E-mail: sekretariat.mo ... 
+
+
+https://www.firmy.cz/detail/2122050-restaurace-u-veverky-praha-bubenec.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Restaurace U Veverky (Praha, Bubeneč) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/2122050-restaurace-u-veverky-praha-bubenec.html
+plaintext;;//h1;;0;;Restaurace U Veverky
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, otevírací hodiny a hodnocení Restaurace U Veverky, Praha, Bubeneč. Telefon: 603 781 ... 
+
+
+https://www.firmy.cz/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/kraj-plzensky/plzen-mesto?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Levné ubytování Plzeň-město • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/kraj-plzensky/plzen-mesto
+plaintext;;//h1;;0;;Levné ubytování   					Plzeň-město
+href;;link[rel="next"];;0;;/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/kraj-plzensky/plzen-mesto?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;firem v kategorii Levné ubytování v Plzni-město a okolí. Vybrat si můžete z firem v okolí, 
+
+
+https://www.firmy.cz/Remesla-a-sluzby/Polygraficke-sluzby/Copycentra/kraj-olomoucky/olomouc?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Copycentra Olomouc • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Remesla-a-sluzby/Polygraficke-sluzby/Copycentra/kraj-olomoucky/olomouc
+plaintext;;//h1;;0;;Copycentra   					Olomouc
+href;;link[rel="next"];;0;;/Remesla-a-sluzby/Polygraficke-sluzby/Copycentra/kraj-olomoucky/olomouc?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;firem v kategorii Copycentra v Olomouci a okolí. Vybrat si můžete z firem v okolí, třeba
+
+
+https://www.firmy.cz/?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Katalog firem a institucí • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/
+plaintext;;//h1/span;;0;;Firmy.cz katalog firem a institucí 
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Katalog ověřených firem v ČR. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+
+
+https://www.firmy.cz/detail/12750546-lear-corporation-czech-republic-kostelec-ostrov-u-stribra.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Lear Corporation Czech Republic, s.r.o. (Kostelec, Ostrov u Stříbra) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/12750546-lear-corporation-czech-republic-kostelec-ostrov-u-stribra.html
+plaintext;;//h1;;0;;Lear Corporation Czech Republic, s.r.o.
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon a hodnocení Lear Corporation Czech Republic, s.r.o., Kostelec, Ostrov u Stříbra. Telefon: 374 610 ... 
+
+
+https://www.firmy.cz/detail/344580-tango-taxi-kladno.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;TANGO Taxi (Kladno) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/344580-tango-taxi-kladno.html
+plaintext;;//h1;;0;;TANGO Taxi
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, provozní hodiny a hodnocení TANGO Taxi, Kladno. Telefon: 312 242 ... 
+
+
+https://www.firmy.cz/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/Ubytovny/kraj-jihomoravsky/brno-mesto?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Ubytování na ubytovnách Brno-město • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/Ubytovny/kraj-jihomoravsky/brno-mesto
+plaintext;;//h1;;0;;Ubytování na ubytovnách   					Brno-město
+href;;link[rel="next"];;0;;/Cestovni-sluzby/Ubytovaci-sluzby/Levne-ubytovani/Ubytovny/kraj-jihomoravsky/brno-mesto?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;; firem v kategorii Ubytování na ubytovnách v Brně-město a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/232336-psychiatricka-nemocnice-v-opave-opava-predmesti.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Psychiatrická nemocnice v Opavě (Opava, Předměstí) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/232336-psychiatricka-nemocnice-v-opave-opava-predmesti.html
+plaintext;;//h1;;0;;Psychiatrická nemocnice v Opavě
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail a hodnocení Psychiatrická nemocnice v Opavě, Opava, Předměstí. Telefon: 553 695 ... 
+
+
+https://www.firmy.cz/Eroticke_firmy?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Erotické firmy • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Eroticke_firmy
+plaintext;;//h1;;0;;Erotické firmy
+href;;link[rel="next"];;0;;/Eroticke_firmy?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;; firem v kategorii Erotické firmy. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/detail/1962465-telocvicna-orel-jednota-brno-husovice-brno-husovice.html?l=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Tělocvična Orel jednota Brno - Husovice (Brno, Husovice) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/1962465-telocvicna-orel-jednota-brno-husovice-brno-husovice.html
+plaintext;;//h1;;0;;Tělocvična Orel jednota Brno - Husovice
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, otevírací hodiny a hodnocení Tělocvična Orel jednota Brno - Husovice, Brno, Husovice. Telefon: 605 503 ... 
+
+
+https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-potravin/kraj-moravskoslezsky/karvina/4605-havirov?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Výroba potravin Havířov • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-potravin/kraj-moravskoslezsky/karvina/4605-havirov
+plaintext;;//h1;;0;;Výroba potravin   					Havířov
+href;;link[rel="next"];;0;;/Velkoobchod-a-vyroba/Vyrobci-potravin/kraj-moravskoslezsky/karvina/4605-havirov?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;firem v kategorii Výroba potravin v Havířově. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/Remesla-a-sluzby/Reality/kraj-praha/praha-10?jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Reality Praha 10 • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Remesla-a-sluzby/Reality/kraj-praha/praha-10
+plaintext;;//h1;;0;;Reality   					Praha 10
+href;;link[rel="next"];;0;;/Remesla-a-sluzby/Reality/kraj-praha/praha-10?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;; firem v kategorii Reality v Praze 10 a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-potravin/kraj-moravskoslezsky/karvina/4605-havirov?page=2&jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Výroba potravin Havířov • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Velkoobchod-a-vyroba/Vyrobci-potravin/kraj-moravskoslezsky/karvina/4605-havirov?page=2
+plaintext;;//h1;;0;;Výroba potravin   					Havířov
+href;;link[rel="next"];;0;;/Velkoobchod-a-vyroba/Vyrobci-potravin/kraj-moravskoslezsky/karvina/4605-havirov?page=3
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;; firem v kategorii Výroba potravin v Havířově. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/pobocky/198930-ceska-posta-s-p/kraj-praha?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Pobočky Česká pošta, s.p. Praha • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/pobocky/198930-ceska-posta-s-p/kraj-praha
+plaintext;;//h1;;0;;Pobočky firmy Česká pošta, s.p. v Praze
+href;;link[rel="next"];;0;;/pobocky/198930-ceska-posta-s-p/kraj-praha?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Hledáte nejbližší pobočky Česká pošta, s.p. v Praze? Na firmy.cz je snadno najdete na mapě s aktuálními ověřenými kontakty a hodnocením uživatelů.
+
+
+https://www.firmy.cz/detail/12973177-aaa-auto-praha-cimice.html?_escaped_fragment_=
+200
+plaintext;;//title;;0;;AAA AUTO (Praha, Čimice) • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/detail/12973177-aaa-auto-praha-cimice.html
+plaintext;;//h1;;0;;AAA AUTO
+href;;link[rel="next"];;0;;
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Aktuální ověřené informace: adresa, telefon, e-mail, otevírací hodiny a hodnocení AAA AUTO, Praha, Čimice. Telefon: 800 110 ... 
+
+
+https://www.firmy.cz/pobocky/495499-lidl/?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Pobočky Lidl  • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/pobocky/495499-lidl/
+plaintext;;//h1;;0;;Pobočky firmy Lidl
+href;;link[rel="next"];;0;;/pobocky/495499-lidl/?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Hledáte nejbližší pobočky Lidl ve svém okolí? Na firmy.cz je snadno najdete na mapě s aktuálními ověřenými kontakty a hodnocením uživatelů.
+
+
+https://www.firmy.cz/pobocky/495499-lidl/?page=2&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Pobočky Lidl  • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/pobocky/495499-lidl/?page=2
+plaintext;;//h1;;0;;Pobočky firmy Lidl
+href;;link[rel="next"];;0;;/pobocky/495499-lidl/?page=3
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Hledáte nejbližší pobočky Lidl ve svém okolí? Na firmy.cz je snadno najdete na mapě s aktuálními ověřenými kontakty a hodnocením uživatelů.
+
+
+https://www.firmy.cz/Remesla-a-sluzby/Reality/kraj-praha/praha-10?page=2&jardaladiseo=1&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Reality Praha 10 • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/Remesla-a-sluzby/Reality/kraj-praha/praha-10?page=2
+plaintext;;//h1;;0;;Reality   					Praha 10
+href;;link[rel="next"];;0;;/Remesla-a-sluzby/Reality/kraj-praha/praha-10?page=3
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;firem v kategorii Reality v Praze 10 a okolí. Vybrat si můžete z firem v okolí, třeba 
+
+
+https://www.firmy.cz/pobocky/198930-ceska-posta-s-p/kraj-kralovehradecky/hradec-kralove?_escaped_fragment_=
+200
+plaintext;;//title;;0;;Pobočky Česká pošta, s.p. Hradec Králové • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/pobocky/198930-ceska-posta-s-p/kraj-kralovehradecky/hradec-kralove
+plaintext;;//h1;;0;;Pobočky firmy Česká pošta, s.p. v Hradci Králové
+href;;link[rel="next"];;0;;/pobocky/198930-ceska-posta-s-p/kraj-kralovehradecky/hradec-kralove?page=2
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Hledáte nejbližší pobočky Česká pošta, s.p. v Hradci Králové? Na firmy.cz je snadno najdete na mapě s aktuálními ověřenými kontakty a hodnocením uživatelů.
+
+
+https://www.firmy.cz/pobocky/198930-ceska-posta-s-p/kraj-kralovehradecky/hradec-kralove?page=2&_escaped_fragment_=
+200
+plaintext;;//title;;0;;Pobočky Česká pošta, s.p. Hradec Králové • Firmy.cz
+href;;link[rel="canonical"];;0;;https://www.firmy.cz/pobocky/198930-ceska-posta-s-p/kraj-kralovehradecky/hradec-kralove?page=2
+plaintext;;//h1;;0;;Pobočky firmy Česká pošta, s.p. v Hradci Králové
+href;;link[rel="next"];;0;;/pobocky/198930-ceska-posta-s-p/kraj-kralovehradecky/hradec-kralove?page=3
+content;;meta[name="robots"];;0;;
+contentContains;;meta[name="description"];;0;;Hledáte nejbližší pobočky Česká pošta, s.p. v Hradci Králové? Na firmy.cz je snadno najdete na mapě s aktuálními ověřenými kontakty a hodnocením uživatelů.
+
+
