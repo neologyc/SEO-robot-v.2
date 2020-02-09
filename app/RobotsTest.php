@@ -26,7 +26,7 @@ class RobotsTest {
       $this->log .= logger::log('TESTING ROBOTS.TXT:', 'boldInfo');
 
       // download file
-      $this->download = Downloader::download($this->robotsTxtURL, $this->userAgent, 2);
+      $this->download = Downloader::download($this->robotsTxtURL, $this->userAgent);
       if($this->download['statusCode'] != 200 ){
           $this->log .= logger::log('Robots.txt was not downloaded correctly. Webserver responded HTTP status code : '. $this->download['statusCode'] , 'error');
       } else {

@@ -28,7 +28,7 @@ class Mailer {
   {
     $this->emailHost = $gs->emailHost;
     $this->emailPort = $gs->emailPort;
-    $this->emailSMTPSecure = $gs->emailSMTPSecure ? '' : PHPMailer::ENCRYPTION_STARTTLS;
+    $this->emailSMTPSecure = $gs->emailSMTPSecure == FALSE ? FALSE : PHPMailer::ENCRYPTION_STARTTLS;
     $this->emailSMTPAuth = $gs->emailSMTPAuth;
     $this->emailSMTPUsername = $gs->emailUsername;
     $this->emailSMTPPassword = $gs->emailPassword;

@@ -42,7 +42,7 @@ class URLsTests {
           $downloadedData = NULL;
           $errorLogTmp = '';
 
-          $downloadedData = Downloader::download($test['url'], $this->userAgent, 3);
+          $downloadedData = Downloader::download($test['url'], $this->userAgent);
           $this->downloadedData = $downloadedData;
 
 
@@ -126,7 +126,7 @@ class URLsTests {
                                 $this->log .= logger::log($testItem['xpath'].' '.$testItem['position'].' is as expected: '.$testItem['expected']);
 
                             } else {
-                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <pre style="display:inline-block">"'.$found.'"</pre>';
+                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <xmp style="display:inline-block">"'.$found.'"</xmp>';
                                 $this->log .= logger::log($tmp_error, 'error');
                                 $errorLogTmp = logger::log('Line: '.$testLineId. ' ' . $tmp_error, 'error');
                                 $hasError = TRUE;
@@ -157,7 +157,7 @@ class URLsTests {
                                 $this->log .= logger::log($testItem['xpath'].' '.$testItem['position'].' is as expected: '.$testItem['expected']);
 
                             } else {
-                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <pre style="display:inline-block">"'.$found.'"</pre>';
+                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <xmp style="display:inline-block">"'.$found.'"</xmp>';
                                 $this->log .= logger::log($tmp_error, 'error');
                                 $errorLogTmp = logger::log('Line: '.$testLineId. ' ' . $tmp_error, 'error');
                                 $hasError = TRUE;
@@ -188,7 +188,7 @@ class URLsTests {
                                 $this->log .= logger::log($testItem['xpath'].' '.$testItem['position'].' is as expected: '.$testItem['expected']);
 
                             } else {
-                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <pre style="display:inline-block">"'.$found.'"</pre>';
+                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <xmp style="display:inline-block">"'.$found.'"</xmp>';
                                 $this->log .= logger::log($tmp_error, 'error');
                                 $errorLogTmp = logger::log('Line: '.$testLineId. ' ' . $tmp_error, 'error');
                                 $hasError = TRUE;
@@ -219,7 +219,7 @@ class URLsTests {
                                 $this->log .= logger::log($testItem['xpath'].' '.$testItem['position'].' is as expected: '.$testItem['expected']);
 
                             } else {
-                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <pre style="display:inline-block">"'.$found.'"</pre>';
+                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <xmp style="display:inline-block">"'.$found.'"</xmp>';
                                 $this->log .= logger::log($tmp_error, 'error');
                                 $errorLogTmp = logger::log('Line: '.$testLineId. ' ' . $tmp_error, 'error');
                                 $hasError = TRUE;
@@ -250,7 +250,7 @@ class URLsTests {
                                 $this->log .= logger::log($testItem['xpath'].' '.$testItem['position'].' is as expected: '.$testItem['expected']);
 
                             } else {
-                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <pre style="display:inline-block">"'.$found.'"</pre>';
+                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <xmp style="display:inline-block">"'.$found.'"</xmp>';
                                 $this->log .= logger::log($tmp_error, 'error');
                                 $errorLogTmp = logger::log('Line: '.$testLineId. ' ' . $tmp_error, 'error');
                                 $hasError = TRUE;
@@ -281,7 +281,7 @@ class URLsTests {
                                 $this->log .= logger::log($testItem['xpath'].' '.$testItem['position'].' is as expected: '.$testItem['expected']);
 
                             } else {
-                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <pre style="display:inline-block">"'.$found.'"</pre>';
+                                $tmp_error = $testItem['xpath'].' '.$testItem['position'].' is NOT as expected: "'.$testItem['expected']. '". Online is: <xmp style="display:inline-block">"'.$found.'"</xmp>';
                                 $this->log .= logger::log($tmp_error, 'error');
                                 $errorLogTmp = logger::log('Line: '.$testLineId. ' ' . $tmp_error, 'error');
                                 $hasError = TRUE;

@@ -96,6 +96,7 @@ class Project
             continue;
         } else if (preg_match("/^http.*$/", $test_line) ) { // is URL
             $previousWasURL = TRUE;
+            $test_line = strpos( $test_line, '{{nocache}}' ) !== FALSE ? str_replace('{{nocache}}', base64_encode(openssl_random_pseudo_bytes(30)) , $test_line) : $test_line ; 
             $tests[++$arrayIndex]['url'] = $test_line;
             $tests[$arrayIndex]['line'] = $line;
         } else if ( preg_match("/^[0-9]{3}$/", $test_line) && $previousWasURL ) { // is HTTP code
