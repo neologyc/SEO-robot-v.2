@@ -1,0 +1,139 @@
+##############################################################################
+###### typické redirecty + stará přesměrování
+##############################################################################
+http://www.firmy.cz/
+301;https://www.firmy.cz/
+
+https://firmy.cz/
+301;https://www.firmy.cz/
+
+https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?geo=0
+301;https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary
+
+https://www.firmy.cz/detail/155088-google.html
+301;https://www.firmy.cz/detail/155088-seznam-cz-praha-smichov.html
+
+https://www.firmy.cz/detail/12967540-vasecigareta-cz-praha-smichov.html
+301;https://www.firmy.cz/detail/12967540-vaprio-praha-smichov.html
+
+https://www.firmy.cz/detail/12967540-vasecigareta-cz-praha-smichov.html
+301;https://www.firmy.cz/detail/12967540-vaprio-praha-smichov.html
+
+https://www.firmy.cz/detail/442434-sbazar-cz-praha-cast-obce-smichov.html
+301;https://www.firmy.cz/detail/442434-sbazar-cz-praha-smichov.html
+
+https://www.firmy.cz/detail/442434-sbazar-cz-praha-cast-obce-smichov.html
+301;https://www.firmy.cz/detail/442434-sbazar-cz-praha-smichov.html
+
+# redirecty pobocek
+https://www.firmy.cz/?gId=155088
+https://www.firmy.cz/pobocky/155088-seznam-cz-a-s/
+
+https://www.firmy.cz/kraj-praha/praha-5?gId=155088
+301;https://www.firmy.cz/pobocky/155088-seznam-cz-a-s/kraj-praha/praha-5
+
+
+##############################################################################
+###### servisní URL pro roboty
+##############################################################################
+https://www.firmy.cz/robots.txt
+200
+
+https://www.firmy.cz/sitemap.xml
+200
+
+#https://www.firmy.cz/sitemap-c_data_G_H-PTcUG-1.xml.gz
+#200
+
+https://www.firmy.cz/new-sitemap.xml
+404
+
+
+##############################################################################
+###### chyby
+##############################################################################
+# smazaná firma vrací 410
+https://www.firmy.cz/detail/13132730-bkplast-citice.html?jardaladiseo=123456
+410
+
+# špatný adresář
+https://www.firmy.cz/hovadina?jardaladiseo=1
+404
+
+# nic nenajdu
+https://www.firmy.cz/?q=%C5%A1m%C3%A9%C4%8Dko404&jardaladiseo=1
+200
+
+https://www.firmy.cz/Obchody-a-obchudky/Prodejci-nabytku/Prodejci-nabytkovych-doplnku-pro-jardu-domu
+404
+
+https://www.firmy.cz/detail/1-drevomat-unhost-s-r-o-unhost.html
+404
+
+
+##############################################################################
+###### testy HTML
+##############################################################################
+
+ 
+
+###### homepage
+https://www.firmy.cz/?jardaladiseo=1
+200
+plaintextExact;;//title;;0;;Katalog firem a institucí • Firmy.cz
+contentExact;;meta[name="description"];;0;;Katalog ověřených firem v ČR. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+hrefExact;;//*[@id="box2"] div div ul li[1] h3 a;;0;;/Auto-moto
+
+
+###### homepage + lokalita kraj
+https://www.firmy.cz/kraj-praha?jardaladiseo=1
+200
+plaintextExact;;//title;;0;;Katalog firem a institucí Praha • Firmy.cz
+contentExact;;meta[name="description"];;0;;Katalog ověřených firem v Praze a okolí. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+hrefExact;;//*[@id="box2"] div div ul li[1] h3 a;;0;;/Auto-moto/kraj-praha
+
+
+###### homepage + lokalita Praha 5
+https://www.firmy.cz/kraj-praha/praha-5?jardaladiseo=1
+200
+plaintextExact;;//title;;0;;Katalog firem a institucí Praha 5 • Firmy.cz
+contentExact;;meta[name="description"];;0;;Katalog ověřených firem v Praze 5 a okolí. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+hrefExact;;//*[@id="box2"] div div ul li[1] h3 a;;0;;/Auto-moto/kraj-praha/praha-5
+
+
+###### homepage + lokalita okres
+https://www.firmy.cz/kraj-jihomoravsky/brno-mesto?jardaladiseo=1
+200
+plaintextExact;;//title;;0;;Katalog firem a institucí Brno-město • Firmy.cz
+contentExact;;meta[name="description"];;0;;Katalog ověřených firem v Brně-město a okolí. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+hrefExact;;//*[@id="box2"] div div ul li[1] h3 a;;0;;/Auto-moto/kraj-jihomoravsky/brno-mesto
+
+
+###### homepage + lokalita obec
+https://www.firmy.cz/kraj-vysocina/zdar-nad-sazavou/5343-nove-mesto-na-morave?jardaladiseo=1
+200
+plaintextExact;;//title;;0;;Katalog firem a institucí Nové Město na Moravě • Firmy.cz
+contentExact;;meta[name="description"];;0;;Katalog ověřených firem v Novém Městě na Moravě. Pravidelně aktualizovaný seznam firem a institucí, aktuální kontakty a uživatelské hodnocení firem.
+hrefExact;;//*[@id="box2"] div div ul li[1] h3 a;;0;;/Auto-moto/kraj-vysocina/zdar-nad-sazavou/5343-nove-mesto-na-morave
+
+
+###### kategorie
+https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1
+200
+plaintextExact;;//title;;0;;Autobazar • Firmy.cz
+contentContains;;meta[name="description"];;0;;firem v kategorii Autobazary. Vybrat si můžete z firem v okolí, 
+plaintextExact;;//h1;;0;;Autobazary
+# SEO text pod kategorií
+plaintextExact;;//*[@id="box7"] [@class*="catalogSeoDescription"] div h3;;0;;Autobazary 
+# SEO text u stránkování
+plaintextExact;;//*[@id="box6"] p[@class="extendInfo"];;0;;z kategorie Autobazary v celé ČR.
+hrefExact;;link[rel="canonical"];;0;;https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1
+plaintextExact;;//*[@id="box8"] div[@class*="catalogSeoLocalities"] h2;;0;;Autobazary
+plaintextContains;;//*[@id="box8"] div[@class*="catalogSeoLocalities"] div ul;;0;;Praha
+hrefContains;;//*[@id="box8"] div[@class*="catalogSeoLocalities"] div ul li a;;0;;/Auto-moto/Auto-moto-prodejci/Autobazary/kraj-
+
+
+###### kategorie + UTM = test ignorace UTM v URL
+https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1&utm_source=jarda
+200
+hrefExact;;link[rel="canonical"];;0;;https://www.firmy.cz/Auto-moto/Auto-moto-prodejci/Autobazary?jardaladiseo=1
