@@ -19,7 +19,7 @@ class ProjectsSettings
         'jarda' => array(
             'robotsTxtURL'                => 'https://www.firmy.cz/robots.txt', // set to FALSE if you don´t want to test robots.txt
             'robotsTxtLocalFilename'      => $gs->robotsDir.'firmz.txt', // set to FALSE if you don´t want to test robots.txt
-            'testRules'                   => $gs->testsDir.'firmy1.txt',
+            'testRules'                   => $gs->testsDir.'firmy.txt',
             'curl_useragent'              => 'Googlebot SEO monitoring - Jaroslav.hlavinka@firma.seznam.cz',
             'notificationEmail'           => 'email@seznam.cz;email@gmail.com',
             //'notificationEmail'         => $gs->defaultEmailForNotifications,
@@ -31,7 +31,7 @@ class ProjectsSettings
         'jarda' => array(
             'robotsTxtURL'                => 'https://www.firmy.cz/robots.txt', // set to FALSE if you don´t want to test robots.txt
             'robotsTxtLocalFilename'      => $gs->robotsDir.'firmz.txt', // set to FALSE if you don´t want to test robots.txt
-            'testRules'                   => $gs->testsDir.'firmy1.txt',
+            'testRules'                   => $gs->testsDir.'firmy.txt',
             'curl_useragent'              => 'Googlebot SEO monitoring - Jaroslav.hlavinka@firma.seznam.cz',
             'notificationEmail'           => 'email@seznam.cz;email@gmail.com',
             //'notificationEmail'         => $gs->defaultEmailForNotifications,
